@@ -5,12 +5,39 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Dyandra.View"
              mc:Ignorable="d" 
-             d:DesignHeight="185" d:DesignWidth="500">
+             d:DesignHeight="230" d:DesignWidth="500">
     <Grid Background="Black">
-        <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
-            <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch" Margin="5, 0">
+        <StackPanel
+            Orientation="Vertical"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center">
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch">
                 <TextBox x:Name="TxtTime" Background="Transparent" Foreground="Red" BorderThickness="0" FontSize="65" HorizontalAlignment="Center">00:00</TextBox>
                 <TextBlock Background="Transparent" Foreground="Red" TextAlignment="Center">Current Time</TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch">
+                <TextBox x:Name="TxtStopwatch" Background="Transparent" Foreground="Red" BorderThickness="0" FontSize="65" HorizontalAlignment="Center">00:00:00.000</TextBox>
+                <StackPanel
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center">
+                    <Button
+                        x:Name="StartButton"
+                        MinHeight="20"
+                        MinWidth="40"
+                        Click="StartButton_Click">&#x25b6;</Button>
+                    <Button
+                        x:Name="StopButton"
+                        MinHeight="20"
+                        MinWidth="40"
+                        Click="StopButton_Click">&#x23f9;</Button>
+                    <Button
+                        x:Name="ResetButton"
+                        MinHeight="20"
+                        MinWidth="40"
+                        Click="ResetButton_Click">&#x1f504;</Button>
+                </StackPanel>
+                <TextBlock Background="Transparent" Foreground="Red" TextAlignment="Center">Stopwatch</TextBlock>
             </StackPanel>
         </StackPanel>
     </Grid>
